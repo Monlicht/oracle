@@ -20,7 +20,8 @@
 ![pic4](pic4.png)
 4.以下样例查看表空间的数据库文件，以及每个文件的磁盘占用情况。  
 ![pic5](pic5.png)
-5.orders表按范围分区进行存储，order_details使用引用分区进行存储。order_details使用USERS表进行存储，orders表按范围在USERS表和USERS02表中进行存储。所以USERS表使用的空间较多，USERS02表的使用空间也较多，而USERS03表使用空间很少。
+# 实验分析
+5.orders表按范围分区进行存储，order_details使用引用分区进行存储。order_details使用USERS空间进行存储，orders表按范围在USERS空间和USERS02空间中进行平均分配存储。所以USERS表使用的空间较多，USERS02表的使用空间也较多，而USERS03表使用空间很少。
 6.test3.sql脚本
 ```
 
